@@ -1,0 +1,173 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--cream);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-container {
+  width: 90%;
+  max-width: 30rem;
+  display: flex;
+  border-radius: 12px;
+}
+
+.image-container {
+  width: 50%;
+}
+
+.desktop-img,
+.mobile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.content-container {
+  background-color: var(--White);
+  width: 50%;
+  padding: 1.6rem 1.5rem;
+}
+
+.perfume {
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+}
+
+.content-container h2 {
+  font-family: "Fraunces", serif;
+  margin: 0.8rem 0;
+  max-width: 80%;
+  color: var(--Very-dark-blue);
+}
+
+.description {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.price-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.1rem 0;
+}
+
+.price-container p {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--dark-cyan);
+}
+
+.price-container del {
+  font-weight: 500;
+  font-size: 0.7rem;
+  align-self: center;
+  color: var(--Dark-grayish-blue);
+}
+
+.add-to-cart-btn {
+  background-color: var(--dark-cyan);
+  padding: 0.7rem 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #1a4031;
+}
+
+.add-to-cart-btn img {
+  width: 13px;
+  margin-right: 0.5rem;
+}
+
+.add-to-cart-btn a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+@media (max-width: 31.875rem) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+  .image-container,
+  .content-container {
+    width: 100%;
+  }
+
+  .perfume {
+    font-size: 0.75rem;
+  }
+  .content-container h2 {
+    max-width: 100%;
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .price-container {
+    max-width: 65%;
+  }
+
+  .price-container p {
+    font-size: 2rem;
+  }
+
+  .price-container del {
+    font-size: 0.9rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+  }
+
+  .add-to-cart-btn img {
+    width: 16px;
+    /* margin-right: 0.5rem; */
+  }
+
+  .add-to-cart-btn a {
+    font-size: 1rem;
+  }
+}
